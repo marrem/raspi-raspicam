@@ -1,0 +1,16 @@
+[Unit]
+Description=Camera Raspimjpeg service
+After=network.target
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+User=webcam
+ExecStart=/usr/local/bin/raspimjpeg --config /etc/raspimjpeg.config
+ExecStartPre=/usr/local/bin/prepareRaspimjpeg
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

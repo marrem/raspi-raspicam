@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Has to be same as path part of preview_path in raspimjpeg.config
+OUTDIR=/dev/shm/mjpeg
+# Status and FIFO should be set to this location in raspimjpeg.config
+RUNDIR=/var/run/raspimjpeg
+FIFO=FIFO
+
+if [ ! -d $OUTDIR ];then
+  echo "$OUTDIR not found, creating"
+  mkdir $OUTDIR
+  chown webcam:webcam $OUTDIR
+else
+  echo "Cleaning $OUTDIR"
+  rm -rf $OUTDIR/*
+fi
+
+if [ ! -d $RUNDIR ];then
+   echo "$RUNDIR not found, creating"
+   mkdir $RUNDIR
+   chown webcam:webcam $RUNDIR
+   mkfifo $RUNDIR/$FIFO 
+   chown webcam:webcam $RUNDIR/$FIFO
+fi
+
+
+
+
