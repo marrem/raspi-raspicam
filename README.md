@@ -26,7 +26,7 @@ you can use the raspberry-pi as a regular webcam
 ## Addendum
 
 There now exists a fork of the mjpg-streamer with a plugin to read directly from the Raspberry Pi camera. So raspimjpeg
-is not necessary anymore. For more info I will create a repo raspi-mjpg-streamer soon.
+is not necessary anymore. For more info See: https://github.com/marrem/raspi-mjpg-streamer
 
 
 
