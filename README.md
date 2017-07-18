@@ -20,8 +20,14 @@
 
 ## Using images
 
-You can install mjpeg-streamer to use the written images and publish them as a mjpeg stream, so 
+You can install mjpeg-streamer with the *input_file* plugin to use the written images and publish them as a mjpeg stream, so 
 you can use the raspberry-pi as a regular webcam
+
+## Addendum
+
+There now exists a fork of the mjpg-streamer with a plugin to read directly from the Raspberry Pi camera. So raspimjpeg
+is not necessary anymore. For more info I will create a repo raspi-mjpg-streamer soon.
+
 
 
 
